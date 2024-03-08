@@ -1,0 +1,10 @@
+.lodging-container {
+    @include widthContainer;
+    background-color: $bg-color;
+    border-radius: 25px;
+    padding: 50px;
+    height: 50vh;
+    @media screen and (max-width: 1024px) {
+        padding: 22px;
+    }
+}

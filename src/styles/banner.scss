@@ -1,0 +1,40 @@
+.banner-container {
+    @include widthContainer;
+    background-image: url(../assets/homepage-banner.png);
+    background-size: cover;
+    height: 223px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 1024px) {
+        justify-content: flex-start;
+        margin-bottom: 22px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $black-color;
+        opacity: 60%;
+        z-index: 1;
+        border-radius: 25px;
+    }
+
+    .banner-title {
+        color: white;
+        z-index: 2;
+        font-weight: 700;
+        @media screen and (max-width: 1024px) {
+            width: 80%;
+        }
+    }
+}

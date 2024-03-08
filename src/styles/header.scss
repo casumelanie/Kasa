@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin: 0 45px 45px 45px;
+    @media screen and (max-width: 1024px) {
+        margin: 0 20px 20px 20px;
+    }
+    &-logo {
+        width: 210px;
+        height: 68px;
+        @media screen and (max-width: 1024px) {
+            width: 145px;
+            height: 46px;
+        }
+    }
+    &-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 57px;
+        @media screen and (max-width: 1024px) {
+            gap: 26px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #000000;
+            font-size: 24px;
+            @media screen and (max-width: 1024px) {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
