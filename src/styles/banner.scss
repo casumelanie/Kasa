@@ -1,6 +1,3 @@
-@import './variables.scss';
-@import './mixins.scss';
-
 .banner-container {
     @include widthContainer;
     background-image: url(../assets/homepage-banner.png);
