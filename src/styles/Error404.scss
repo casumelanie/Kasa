@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    gap: 10vh;
+    @media screen and (max-width: 1024px) {
+
+    }
+    .error-type {
+        font-size: 288px;
+        font-weight: 700;
+        color: $primary-color;
+        @media screen and (max-width: 1024px) {
+            font-size: 96px;
+        }
+    }
+    .error-description {
+        color: $primary-color;
+        font-weight: 500;
+        text-align: center;
+        font-size: 36px;
+        @media screen and (max-width: 1024px) {
+            font-size: 18px;
+        }
+    }
+    .error-link {
+        color: $black-color;
+        font-size: 18px;
+        @media screen and (max-width: 1024px) {
+            font-size: 14px;
+        }
+    }
+}

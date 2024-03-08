@@ -8,19 +8,20 @@ import Lodging from './pages/Lodging'
 import Error404 from './components/Error404'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import logo from './assets/LOGO.svg'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
-      <Header />
+      <Header logo={logo} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hebergements" element={<Lodging />} />
         <Route path="/a-propos" element={<About />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
-      <Footer />
+      <Footer logo={logo} />
     </Router>
   </React.StrictMode>,
 )
