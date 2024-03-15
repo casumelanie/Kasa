@@ -1,5 +1,24 @@
+import { useParams } from 'react-router-dom'
+import { useGetLodgingById } from '../components/api'
+import Error404 from '../components/Error404.jsx'
+
 const Lodging = () => {
-  return <div>Page mère des hébergements</div>
+  const { id } = useParams()
+  const { data, isLoading, error } = useGetLodgingById(id)
+
+  if (error) return <Error404 />
+
+  return (
+    <div>
+      {isLoading ? (
+        <div>Chargement en cours...</div>
+      ) : (
+        <span>
+          Page hébergement {id} - {data?.title}
+        </span>
+      )}
+    </div>
+  )
 }
 
 export default Lodging

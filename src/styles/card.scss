@@ -1,10 +1,65 @@
-.lodging-container {
+.gallery {
     @include widthContainer;
     background-color: $bg-color;
     border-radius: 25px;
     padding: 50px;
-    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
     @media screen and (max-width: 1024px) {
         padding: 22px;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0;
+        grid-template-columns: 1fr;
+        background: none;
+        gap: 22px;
+    }
+    .lodging-card {
+        position: relative;
+        height: 100%;
+        max-height: 340px;
+        width: 100%;
+        max-width: 340px;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        box-sizing: border-box;
+        @media screen and (max-width: 1024px) {
+            aspect-ratio: 4/3;
+            max-width: 100%;
+            justify-self: center;
+        }
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            max-height: 255px;
+        }
+        .lodging-cover {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .lodging-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            color: $white-color;
+            font-size: 18px;
+            font-weight: 700;
+            z-index: 2;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+        }
     }
 }
