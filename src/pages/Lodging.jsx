@@ -1,16 +1,24 @@
-import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { useGetLodgingById } from '../components/api'
+import Error404 from '../components/Error404.jsx'
 
-/* const Lodging = ({ lodgingData }) => {
-  console.log(lodgingData)
-  return <div>Page hébergement {lodgingData.title} </div>
-} */
+const Lodging = () => {
+  const { id } = useParams()
+  const { data, isLoading, error } = useGetLodgingById(id)
 
-//test
-const Lodging = ({ lodging }) => {
-  //const { lodgingName } = useParams()
-  console.log(lodging)
-  return <div>Page hébergement </div>
+  if (error) return <Error404 />
+
+  return (
+    <div>
+      {isLoading ? (
+        <div>Chargement en cours...</div>
+      ) : (
+        <span>
+          Page hébergement {id} - {data?.title}
+        </span>
+      )}
+    </div>
+  )
 }
 
 export default Lodging
