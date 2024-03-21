@@ -7,6 +7,7 @@ const Lodging = () => {
   const { data, isLoading, error } = useGetLodgingById(id)
 
   if (error) return <Error404 />
+  console.log(data)
 
   return (
     <div>

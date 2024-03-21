@@ -1,7 +1,10 @@
-const Banner = () => {
+const Banner = ({ cover, titleVisible }) => {
   return (
     <div className="banner-container">
-      <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+      {titleVisible ? (
+        <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+      ) : null}
+      <img className="banner-img" src={cover} alt="banner"></img>
     </div>
   )
 }
