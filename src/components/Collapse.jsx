@@ -5,33 +5,22 @@ const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      {!isOpen ? (
-        <div className="collapse collapse-close">
-          <div className="collapse-header">
-            <span>{title}</span>
-            <img
-              className="arrow"
-              onClick={() => setIsOpen(true)}
-              src={arrow}
-              alt="flèche"
-            />
-          </div>
-          <p className="collapse-content content-close">{content}</p>
+      <div key={title} className="collapse">
+        <div className="collapse-header">
+          <span>{title}</span>
+          <img
+            className={`arrow ${isOpen ? 'arrow-open' : ''}`}
+            onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+            src={arrow}
+            alt="flèche"
+          />
         </div>
-      ) : (
-        <div className="collapse collapse-open">
-          <div className="collapse-header">
-            <span>{title}</span>
-            <img
-              className="arrow arrow-open"
-              onClick={() => setIsOpen(false)}
-              src={arrow}
-              alt="flèche"
-            />
-          </div>
-          <p className="collapse-content content-open">{content}</p>
-        </div>
-      )}
+        <p
+          className={`collapse-content ${isOpen ? 'content-open' : 'content-close'}`}
+        >
+          {content}
+        </p>
+      </div>
     </>
   )
 }

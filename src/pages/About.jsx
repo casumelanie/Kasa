@@ -30,7 +30,11 @@ const About = () => {
     <div id="about" className="main-container">
       <Banner cover={bannerCover} titleVisible={false} />
       {aboutCollapse.map((collapse) => (
-        <Collapse title={collapse.title} content={collapse.content} />
+        <Collapse
+          key={collapse.title}
+          title={collapse.title}
+          content={collapse.content}
+        />
       ))}
     </div>
   )

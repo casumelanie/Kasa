@@ -1,0 +1,44 @@
+.slideshow-container {
+    position: relative;
+    height: 415px;
+    width: 100%;
+    border-radius: 25px;
+    @media screen and (max-width: 1024px) {
+        height: 255px;
+    }
+    .slideshow-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        height: 79px;
+        z-index: 2;
+        @media screen and (max-width: 1024px) {
+            height: 24px;
+        }
+    }
+    .arrow-left {
+        left: 23px;
+    }
+    .arrow-right {
+        right: 23px;
+    }
+    .picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    .slide-counter {
+        position: absolute;
+        bottom: 24px;
+        right: 50%;
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 500;
+        transform: translateX(50%);
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+}
