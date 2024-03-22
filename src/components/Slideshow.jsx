@@ -6,8 +6,8 @@ import { useState } from 'react'
 const Slideshow = ({ id, pictures }) => {
   const { data, isLoading, error } = useGetLodgingById(id)
   const [activeSlide, setActiveSlide] = useState(0)
-  const prevSlide = activeSlide === 0 ? pictures.length : activeSlide - 1
-  const nextSlide = activeSlide === pictures.length ? 0 : activeSlide + 1
+  const prevSlide = activeSlide === 0 ? pictures.length - 1 : activeSlide - 1
+  const nextSlide = activeSlide === pictures.length - 1 ? 0 : activeSlide + 1
   console.log(pictures)
 
   return (
