@@ -2,6 +2,7 @@ import Collapse from '../components/Collapse'
 import Banner from '../components/Banner'
 import bannerCover from '../assets/about-banner.png'
 
+// datas des collapses
 const aboutCollapse = [
   {
     title: 'Fiabilité',

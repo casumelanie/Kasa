@@ -15,11 +15,11 @@ const Collapse = ({ title, content }) => {
             alt="flèche"
           />
         </div>
-        <p
+        <div
           className={`collapse-content ${isOpen ? 'content-open' : 'content-close'}`}
         >
           {content}
-        </p>
+        </div>
       </div>
     </>
   )
