@@ -35,6 +35,9 @@
         @media screen and (max-width: 1024px) {
             font-size: 13px;
         }
+        .equipments {
+            margin: 0;
+        }
     }
     .content-open {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
