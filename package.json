@@ -41,5 +41,6 @@
   },
   "devDependencies": {
     "sass": "^1.71.1"
-  }
+  },
+  "homepage": "https://casumelanie.github.io/Kasa/"
 }
