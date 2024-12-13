@@ -34,6 +34,7 @@ export const useGetLodgingById = (id, url = URL_LODGING) => {
           setData(dataFiltered)
         } else {
           throw new Error('Erreur lors de la récupération des données')
+          // Renvoie un erreur si l'id n'est pas correct
         }
       })
       .catch((error) => setError(error))

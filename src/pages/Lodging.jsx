@@ -14,6 +14,7 @@ const Lodging = () => {
 
   //rating
   const fullStar = Array(5).fill(RatingActiveIcon)
+  // je remplis le tableau avec les etoiles
   const emptyStar = Array(5).fill(RatingInactiveIcon)
 
   return (
@@ -49,9 +50,11 @@ const Lodging = () => {
                 <div className="rating">
                   {fullStar.slice(5 - data.rating).map((fullRating, index) => {
                     return <RatingActiveIcon className="star" key={index} />
+                    // j'extrait puis je retourne le nombre d'étoiles correspondantes, j'obtiens le nombre d'etoiles de la data
                   })}
                   {emptyStar.slice(data.rating).map((emptyRating, index) => {
                     return <RatingInactiveIcon className="star" key={index} />
+                    // j'extrait puis je retourne le nombre d'étoiles vides restantes pour aller à 5
                   })}
                 </div>
               </div>
